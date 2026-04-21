@@ -13,8 +13,6 @@ st.markdown("""
     """, unsafe_allow_html=True)
 
 with st.container(horizontal=True):
-   st.button("Reset",type="primary")
-     
    if st.button("Calculate",type="secondary"):
       MAX_VOLT = 68.7
       MIN_VOLT = 50.0
