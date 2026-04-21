@@ -5,15 +5,15 @@ volt = st.text_input("Enter Your EV Voltage",placeholder="e.g. 62.02")
 st.markdown("""
     <style>
     div.stButton > button {
-        height: 3em;
-        width: 8em;
-        font-size: 20px;
+        height: 5em;
+        width: 32em;
+        font-size: 10px;
+        
     }
     </style>
     """, unsafe_allow_html=True)
 
-with st.container(horizontal=True):
-   if st.button("Calculate",type="secondary"):
+if st.button("Calculate",type="primary"):
       MAX_VOLT = 68.7
       MIN_VOLT = 50.0
       MAX_RANGE = 70.0
@@ -46,7 +46,8 @@ with st.container(horizontal=True):
 
 
                 with st.container(border=True):
-                     st.metric(label="Used Battery", value=f"{int(used_battery)}%")
+                      st.metric(label="Estimated Range", value=f"{est_range:.1f} km")
+                     
 
         
                    
@@ -55,7 +56,7 @@ with st.container(horizontal=True):
 
                 with st.container(border=True):
               
-                     st.metric(label="Estimated Range", value=f"{est_range:.1f} km")
+                     st.metric(label="Used Battery", value=f"{int(used_battery)}%")
 
 
 
