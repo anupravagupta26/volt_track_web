@@ -77,16 +77,13 @@ if st.button("Calculate",type="primary"):
                 st.success("The energy is running low")
             else:
                 st.warning("Battery is critically low")
-
-
+            st.markdown("<h4 style='text-align: center;'>Scan to Download the App</h4>", unsafe_allow_html=True)
+            st.image("Volt Track.png",width=300)
+            st.markdown("<h3 style='text-align: center;'>Volt Track</h3>", unsafe_allow_html=True)
         
         
 
-      except ValueError:
-             battery_percentage = 0 
-             estimated_range = 0
-             used_battery = 0
-             travel_range = 0
-    
+      except:
+             st.write("No Value Here")
 
 
