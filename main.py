@@ -78,7 +78,7 @@ if st.button("Calculate",type="primary"):
             else:
                 st.warning("Battery is critically low")
             st.markdown("<h4 style='text-align: center;'>Scan to Download the App</h4>", unsafe_allow_html=True)
-            st.image("Volt Track.png",width=300)
+            st.image("Volt Track.png",width=320)
             st.markdown("<h3 style='text-align: center;'>Volt Track</h3>", unsafe_allow_html=True)
         
         
