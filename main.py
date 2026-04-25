@@ -1,10 +1,10 @@
 import streamlit as st
 
-st.markdown("<h1 style='text-align: center;'>⚡ Volt Track</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center;'>🛵 Volt Track</h1>", unsafe_allow_html=True)
 voltage_option = st.selectbox(
         "Select Voltage Type:",
         ["48V", "60V", "72V"])
-input_voltage = st.text_input("Enter Your EV Voltage",placeholder="e.g. 62.02")
+input_voltage = st.text_input("Enter Your EV Voltage",placeholder="Enter Your EV Voltage")
 st.markdown("""
     <style>
     div.stButton > button {
@@ -20,9 +20,9 @@ st.markdown("""
 
 
 def calculate_48v(input_voltage):
-    MAX_VOLT = 54.6
-    MIN_VOLT = 44.0
-    MAX_RANGE = 60.0
+    MAX_VOLT = 54.60
+    MIN_VOLT = 42.00
+    MAX_RANGE = 60.00
     
     try:
         voltage = float(input_voltage)
@@ -46,7 +46,7 @@ def calculate_48v(input_voltage):
 
 
                 with st.container(border=True):
-                      st.metric(label="Estimated Range", value=f"{est_range:.1f} km")
+                      st.metric(label="Estimated Range", value=f"{int(est_range)} km")
                      
 
         
@@ -64,7 +64,7 @@ def calculate_48v(input_voltage):
 
                 with st.container(border=True):
               
-                    st.metric(label="Travel Range", value=f"{travel_range:.1f} km")
+                    st.metric(label="Travel Range", value=f"{int(travel_range)} km")
             
             
 
@@ -84,41 +84,25 @@ def calculate_48v(input_voltage):
         
         st.markdown("<h2 style='text-align: center;'>🛵 EV Bike Note</h2>", unsafe_allow_html=True)
 
-        col1, col2, col3 = st.columns(3)
+        col1, = st.columns(1)
 
         with col1:
                 st.info("**48V Variant**")
-                st.write("🔋 Full: 54.6V | Low: 42.0V")
+                st.write("🔋 Full: 54.60V | Low: 42.00V")
                 st.write("⚡ Charge: 4-5 Hrs")
                 st.write("🛣️ Range: 50-60 KM")
 
-        with col2:
-                st.success("**60V Variant**")
-                st.write("🔋 Full: 68.7V | Low: 50.0V")
-                st.write("⚡ Charge: 4-5 Hrs")
-                st.write("🛣️ Range: 60-70 KM")
-
-        with col3:
-                st.warning("**72V Variant**")
-                st.write("🔋 Full: 84.6V | Low: 62.0V")
-                st.write("⚡ Charge: 4-5 Hrs")
-                st.write("🛣️ Range: 80-90 KM")
         st.markdown("<h4 style='text-align: center;'>Scan to Download the App</h4>", unsafe_allow_html=True)
         st.image("Volt Track.png",width=320)
         st.markdown("<h3 style='text-align: center;'>Volt Track</h3>", unsafe_allow_html=True)
-        
-
-        
-        
-
     except:
              st.write("No Value Here")
     
 
 def calculate_60v(input_voltage):
-    MAX_VOLT = 68.7
-    MIN_VOLT = 50.0
-    MAX_RANGE = 70.0
+    MAX_VOLT = 67.20
+    MIN_VOLT = 52.00
+    MAX_RANGE = 70.00
     
     try:
         voltage = float(input_voltage)
@@ -142,7 +126,7 @@ def calculate_60v(input_voltage):
 
 
                 with st.container(border=True):
-                      st.metric(label="Estimated Range", value=f"{est_range:.1f} km")
+                      st.metric(label="Estimated Range", value=f"{int(est_range)} km")
                      
 
         
@@ -160,7 +144,7 @@ def calculate_60v(input_voltage):
 
                 with st.container(border=True):
               
-                    st.metric(label="Travel Range", value=f"{travel_range:.1f} km")
+                    st.metric(label="Travel Range", value=f"{int(travel_range)} km")
             
             
 
@@ -177,25 +161,17 @@ def calculate_60v(input_voltage):
                 st.warning("Battery is critically low")
         st.markdown("<h2 style='text-align: center;'>🛵 EV Bike Note</h2>", unsafe_allow_html=True)
 
-        col1, col2, col3 = st.columns(3)
+        col2,  = st.columns(1)
 
-        with col1:
-                st.info("**48V Variant**")
-                st.write("🔋 Full: 54.6V | Low: 42.0V")
-                st.write("⚡ Charge: 4-5 Hrs")
-                st.write("🛣️ Range: 50-60 KM")
+       
 
         with col2:
                 st.success("**60V Variant**")
-                st.write("🔋 Full: 68.7V | Low: 50.0V")
+                st.write("🔋 Full: 67.20V | Low: 52.00V")
                 st.write("⚡ Charge: 4-5 Hrs")
                 st.write("🛣️ Range: 60-70 KM")
 
-        with col3:
-                st.warning("**72V Variant**")
-                st.write("🔋 Full: 84.6V | Low: 62.0V")
-                st.write("⚡ Charge: 4-5 Hrs")
-                st.write("🛣️ Range: 80-90 KM")
+       
 
         st.markdown("<h4 style='text-align: center;'>Scan to Download the App</h4>", unsafe_allow_html=True)
         st.image("Volt Track.png",width=320)
@@ -208,9 +184,9 @@ def calculate_60v(input_voltage):
            
 
 def calculate_72v(input_voltage):
-    MAX_VOLT = 84.6
-    MIN_VOLT = 62.0
-    MAX_RANGE = 90.0
+    MAX_VOLT = 84.00
+    MIN_VOLT = 60.00
+    MAX_RANGE = 90.00
     
     try:
         voltage = float(input_voltage)
@@ -234,7 +210,7 @@ def calculate_72v(input_voltage):
 
 
                 with st.container(border=True):
-                      st.metric(label="Estimated Range", value=f"{est_range:.1f} km")
+                      st.metric(label="Estimated Range", value=f"{int(est_range)} km")
                      
 
         
@@ -252,7 +228,7 @@ def calculate_72v(input_voltage):
 
                 with st.container(border=True):
               
-                    st.metric(label="Travel Range", value=f"{travel_range:.1f} km")
+                    st.metric(label="Travel Range", value=f"{int(travel_range)} km")
             
             
 
@@ -270,33 +246,16 @@ def calculate_72v(input_voltage):
 
         st.markdown("<h2 style='text-align: center;'>🛵 EV Bike Note</h2>", unsafe_allow_html=True)
 
-        col1, col2, col3 = st.columns(3)
-
-        with col1:
-                st.info("**48V Variant**")
-                st.write("🔋 Full: 54.6V | Low: 42.0V")
-                st.write("⚡ Charge: 4-5 Hrs")
-                st.write("🛣️ Range: 50-60 KM")
-
-        with col2:
-                st.success("**60V Variant**")
-                st.write("🔋 Full: 68.7V | Low: 50.0V")
-                st.write("⚡ Charge: 4-5 Hrs")
-                st.write("🛣️ Range: 60-70 KM")
-
+        col3, = st.columns(1)
         with col3:
                 st.warning("**72V Variant**")
-                st.write("🔋 Full: 84.6V | Low: 62.0V")
+                st.write("🔋 Full: 84.00V | Low: 60.00V")
                 st.write("⚡ Charge: 4-5 Hrs")
                 st.write("🛣️ Range: 80-90 KM")
 
         st.markdown("<h4 style='text-align: center;'>Scan to Download the App</h4>", unsafe_allow_html=True)
         st.image("Volt Track.png",width=320)
         st.markdown("<h3 style='text-align: center;'>Volt Track</h3>", unsafe_allow_html=True)
-        
-        
-        
-
     except:
              st.write("No Value Here")
 
