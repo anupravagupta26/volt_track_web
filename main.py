@@ -2,6 +2,13 @@ import streamlit as st
 
 st.set_page_config(page_title="Volt Track",page_icon="logo.png",layout="wide")
 
+st.markdown(
+    """
+    <link rel="manifest" href="manifest.json">
+    """,
+    unsafe_allow_html=True,
+)
+
 st.markdown("<h1 style='text-align: center;'>🛵 Volt Track</h1>", unsafe_allow_html=True)
 voltage_option = st.selectbox(
         "Select Voltage Type:",
