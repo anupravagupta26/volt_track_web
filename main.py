@@ -96,7 +96,7 @@ def calculate_48v(input_voltage):
 
         with col2:
                 st.success("**60V Variant**")
-                st.write("🔋 Full: 67.20V | Low: 52.00V")
+                st.write("🔋 Full: 67.20V | Low: 50.00V")
                 st.write("⚡ Charge: 4-5 Hrs")
                 st.write("🛣️ Range: 60-70 KM")
 
@@ -116,7 +116,7 @@ def calculate_48v(input_voltage):
 
 def calculate_60v(input_voltage):
     MAX_VOLT = 67.20
-    MIN_VOLT = 52.00
+    MIN_VOLT = 50.00
     MAX_RANGE = 70.00
     
     try:
@@ -186,7 +186,7 @@ def calculate_60v(input_voltage):
                 st.write("🛣️ Range: 50-60 KM")
         with col2:
                 st.success("**60V Variant**")
-                st.write("🔋 Full: 67.20V | Low: 52.00V")
+                st.write("🔋 Full: 67.20V | Low: 50.00V")
                 st.write("⚡ Charge: 4-5 Hrs")
                 st.write("🛣️ Range: 60-70 KM")
 
@@ -281,7 +281,7 @@ def calculate_72v(input_voltage):
                 st.write("🛣️ Range: 50-60 KM")
         with col2:
                 st.success("**60V Variant**")
-                st.write("🔋 Full: 67.20V | Low: 52.00V")
+                st.write("🔋 Full: 67.20V | Low: 50.00V")
                 st.write("⚡ Charge: 4-5 Hrs")
                 st.write("🛣️ Range: 60-70 KM")
 
